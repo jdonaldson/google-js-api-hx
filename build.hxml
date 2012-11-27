@@ -1,0 +1,10 @@
+-main RouteReplay3d.hx
+-cp google-js-loader
+-cp google-js-earth-v1
+-cp src
+-js bin/routeReplay3d.js
+# @tm-preview
+
+# -cmd open http://gmap/~jjdonald/strands-running/test.html
+-cmd cp bin/routeReplay3d.js /Users/jjdonald/Projects/tour3d/public/javascripts/v3/modules/routeReplay/routeReplay3d.js
+-cmd open http://tour3d/aficionado/posts/21390532/route_replay3d/

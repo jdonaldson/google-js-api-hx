@@ -1,0 +1,1 @@
+typedef GENavigationControlEnum = Dynamic<Dynamic>;

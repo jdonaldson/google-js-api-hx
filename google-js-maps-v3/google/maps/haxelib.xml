@@ -1,0 +1,10 @@
+<project name="google-js-maps-v3" url="http://haxe.org/com/libs/google-js-maps-v3" license="BSD">
+    <user name="jjdonald"/>
+    <tag v="google"/>
+    <tag v="js"/>
+    <tag v="api"/>
+    <tag v="extern"/>
+    <tag v="maps"/>
+    <description>This library contains extern classes that allow static type checking and compilation for the Google Maps javascript API.</description>
+    <version name="0.1">Added in Google Maps.</version>
+</project>

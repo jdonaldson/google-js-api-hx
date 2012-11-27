@@ -1,0 +1,10 @@
+<project name="google-js-earth-v1" url="http://haxe.org/com/libs/google-js-earth-v1" license="BSD">
+    <user name="jjdonald"/>
+    <tag v="google"/>
+    <tag v="js"/>
+    <tag v="api"/>
+    <tag v="extern"/>
+    <tag v="earth"/>
+    <description>This library contains extern classes that allow static type checking and compilation for the Google Earth javascript API.</description>
+    <version name="0.1">Added in V1 API coverage</version>
+</project>

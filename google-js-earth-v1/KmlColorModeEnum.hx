@@ -1,0 +1,1 @@
+typedef KmlColorModeEnum = Dynamic<Dynamic>;

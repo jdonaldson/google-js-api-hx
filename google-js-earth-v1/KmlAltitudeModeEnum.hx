@@ -1,0 +1,1 @@
+typedef KmlAltitudeModeEnum = Dynamic<Dynamic>;

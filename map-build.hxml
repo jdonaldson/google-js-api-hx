@@ -1,0 +1,7 @@
+-main MapTest
+-js bin/map-test.js
+-cp google-js-api
+
+# @tm-preview
+
+-cmd open bin/map-test.html

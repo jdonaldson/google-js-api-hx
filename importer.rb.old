@@ -1,0 +1,68 @@
+require 'rubygems'
+require 'open-uri' 
+# require 'nokogiri'
+uri = 'http://code.google.com/apis/maps/documentation/javascript/reference.html'
+doc = open(uri).read()
+
+parts = doc.split(/<h2><a name="[A-Z]\w+"><\/a>/)
+first = true
+parts.shift()
+
+parts.each do |pt|
+  if first : first = false; next; end  
+  str = pt
+  # print pt
+
+  # name, description, remainder = str.match(/^\s*([A-Z]\w+)<\/h2>.*?<p>(\w+)<\/p>(.*)/m)
+  # res = str.match(/^\s*([A-Z]\w+) class<\/h2>[^<]*<p>(.*?)(?=(<\/p>))(.*)/m)
+  res = str.match(/^\s*([A-Z]\w+).*?<\/h2>[^<]*<p>(.*?)(?=(<\/p>))(.*)/m)
+
+  # p str
+
+  class_name = res[1]
+
+  class_doc = res[2]
+  remains = res[4]
+  
+
+  section_parts = remains.split(/<h3>/m)
+
+  section_name = remains.match(/<h3>(.*?)(?=(<\/h3>))/)
+
+  if section_name
+
+    if section_name[1] == 'Constructor'
+
+      res = str.match(/<td>(.*?)(?=(<\/td>))(.*?)<td>(.*?)(?=(<\/td>))/m)
+      code = res[1]
+      desc = res[4]
+      code.gsub!(/<[\w\/ \"\=\#]+>/,"") # extract html content
+      code.gsub!(/(\w+)\?/,"?\\1") # swap the question mark side
+      ret = ''
+    else 
+
+      res = str.match(/<td>(.*?)(?=(<\/td>))(.*?)<td>(.*?)(?=(<\/td>))(.*?)<td>(.*?)(?=(<\/td>))/m)
+      p str
+      code = res[1]
+
+      ret = res[4]
+      desc = res[7]
+
+      code.gsub!(/<[\w\/ \"\=\#]+>/,"") # extract html content
+      code.gsub!(/(\w+)\?/,"?\\1") # swap the question mark side
+
+    end
+  end
+
+end
+
+
+
+# print str
+
+
+# print str
+# print section
+# section.scan(/<h3>/){|w| print w}
+
+# parts.each {|p| }

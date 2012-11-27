@@ -1,0 +1,10 @@
+<project name="google-js-api" url="http://haxe.org/com/libs/google_js_api" license="BSD">
+    <user name="jjdonald"/>
+    <tag v="google"/>
+    <tag v="js"/>
+    <tag v="api"/>
+    <tag v="extern"/>
+    <tag v="earth"/>
+    <description>This library contains extern classes that allow static type checking and compilation for various Google javascript API's.</description>
+    <version name="0.2">Added in Google Maps.</version>
+</project>
