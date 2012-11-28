@@ -75,5 +75,9 @@ If true, the marker is visible
 */
 public var visible : Bool;
 
+/*
+Which animation to play when marker is added to a map.
+*/
+public var animation : Animation;
 
 }
